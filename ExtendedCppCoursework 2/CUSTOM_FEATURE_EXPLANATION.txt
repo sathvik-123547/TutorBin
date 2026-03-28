@@ -1,0 +1,35 @@
+Custom feature: Scratch/Vinyl Mode
+
+What the feature is:
+Scratch/Vinyl mode is an interactive turntable-style control system that allows a user to manipulate playback in real time with a tactile "record drag" behavior. It is not implemented by simply plugging pre-made JUCE behavior together; it is driven by a custom class and custom gesture-to-audio logic.
+
+What it does:
+1) Adds an explicit SCRATCH mode toggle per deck.
+2) While SCRATCH mode is active, right-click-dragging on the waveform simulates record dragging.
+3) Horizontal drag movement is converted into turntable velocity.
+4) Velocity is smoothed to avoid abrupt artifacts.
+5) Playback speed ratio is modulated from drag velocity in real time.
+6) Additional position nudge is applied for tactile "vinyl" response.
+7) On mouse release, playback motion decays naturally with inertia back toward normal speed.
+8) User controls sensitivity and inertia with dedicated sliders.
+
+Where it is implemented:
+- Source/ScratchEngine.h
+- Source/ScratchEngine.cpp
+- Source/DeckGUI.h
+- Source/DeckGUI.cpp
+
+Integration details:
+- DeckGUI mouse events call ScratchEngine methods:
+  - beginGesture(...)
+  - updateGesture(...)
+  - endGesture()
+- DeckGUI timer calls:
+  - process(DJAudioPlayer&, dt)
+- ScratchEngine drives DJAudioPlayer through:
+  - setSpeed(...)
+  - nudgePositionRelative(...)
+
+Why this is substantial:
+- The feature contains custom state management, gesture tracking, velocity filtering, inertia modeling, and runtime modulation logic.
+- It exceeds the 80 LOC requirement and uses custom classes with clear comments and implementation effort.

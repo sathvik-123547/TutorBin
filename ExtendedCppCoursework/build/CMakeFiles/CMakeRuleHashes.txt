@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+2d3534c7c554ed40e5d06b7433dab1ae ExtendedCppCoursework_artefacts/JuceLibraryCode/ExtendedCppCoursework/PkgInfo
+305b83f484c153f972f34881b04b271b ExtendedCppCoursework_artefacts/JuceLibraryCode/JuceHeader.h

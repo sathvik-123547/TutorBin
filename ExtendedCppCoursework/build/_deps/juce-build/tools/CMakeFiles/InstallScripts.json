@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/c9n5zj/Desktop/Project'/ExtendedCppCoursework/build/_deps/juce-build/tools/cmake_install.cmake",
+		"/Users/c9n5zj/Desktop/Project'/ExtendedCppCoursework/build/_deps/juce-build/tools/modules/cmake_install.cmake",
+		"/Users/c9n5zj/Desktop/Project'/ExtendedCppCoursework/build/_deps/juce-build/tools/extras/Build/cmake_install.cmake",
+		"/Users/c9n5zj/Desktop/Project'/ExtendedCppCoursework/build/_deps/juce-build/tools/extras/Build/juceaide/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
